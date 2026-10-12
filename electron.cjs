@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, shell } = require('electron')
 const path = require('path')
 
 function createWindow() {
@@ -13,7 +13,28 @@ function createWindow() {
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
+      sandbox: true,
     },
+  })
+
+  // Prevent opening arbitrary windows inside the Electron frame; open external links in default browser
+  win.webContents.setWindowOpenHandler(({ url }) => {
+    if (url.startsWith('https:') || url.startsWith('http:')) {
+      shell.openExternal(url)
+    }
+    return { action: 'deny' }
+  })
+
+  // Prevent arbitrary in-app navigations
+  win.webContents.on('will-navigate', (event, navigationUrl) => {
+    try {
+      const parsed = new URL(navigationUrl)
+      if (parsed.protocol !== 'file:') {
+        event.preventDefault()
+      }
+    } catch {
+      event.preventDefault()
+    }
   })
 
   win.loadFile(path.join(__dirname, 'dist', 'index.html'))

@@ -136,13 +136,21 @@ function App() {
         setScreen('game')
       },
       onMessage: (msg) => {
+        if (!msg || typeof msg !== 'object') return
+
         if (msg.type === 'MOVE') {
-          handlePlayMoveRef.current(msg.index, msg.player, false)
+          const index = Number(msg.index)
+          const player = msg.player === 'X' ? 'X' : msg.player === 'O' ? 'O' : null
+          if (!Number.isInteger(index) || index < 0 || index > 8 || !player) {
+            return
+          }
+          handlePlayMoveRef.current(index, player, false)
         } else if (msg.type === 'NEXT_ROUND') {
           sounds.playClick()
-          setStarter(msg.starter || 'X')
+          const sanitizedStarter = msg.starter === 'O' ? 'O' : 'X'
+          setStarter(sanitizedStarter)
           setSquares(EMPTY_BOARD)
-          setXIsNext((msg.starter || 'X') === 'X')
+          setXIsNext(sanitizedStarter === 'X')
           setIsThinking(false)
         }
       },
