@@ -10,6 +10,7 @@ import PlayerCard from './components/PlayerCard'
 import Board from './components/Board'
 import OnlineLobby from './components/OnlineLobby'
 import QuitModal from './components/QuitModal'
+import InstallAppButton from './components/InstallAppButton'
 
 import './App.css'
 
@@ -352,6 +353,9 @@ function App() {
         </div>
 
         <div className="header-right">
+          {/* Automatic OS Detection Install Button */}
+          <InstallAppButton />
+
           {/* Real-time online connected persons counter */}
           <div className="header-presence-badge" title="Active people connected in real time">
             <span className="live-pulse-dot" />
