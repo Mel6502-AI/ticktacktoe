@@ -13,8 +13,10 @@ Play instantly across desktop and mobile browsers, or install directly to your d
 
 ### 📦 Desktop Apps
 Standalone native windows with hardware acceleration and sandboxed security:
-* **macOS (Apple Silicon)**: Download [`TicTacToe-Arena-1.0.0-arm64.dmg`](./TicTacToe-Arena-1.0.0-arm64.dmg) *(also under [Releases](https://github.com/Mel6502-AI/ticktacktoe/releases/tag/v1.0.0))*
-* **Windows & Linux**: Run `npm run build:win` (generates portable Windows ZIP with `.exe`) or `npm run build:linux` (generates Linux `.tar.gz`).
+* **macOS (Apple Silicon)**: [`TicTacToe-Arena-1.0.0-arm64.dmg`](./TicTacToe-Arena-1.0.0-arm64.dmg) *(in repository root & [Releases](https://github.com/Mel6502-AI/ticktacktoe/releases/download/v1.0.0/TicTacToe-Arena-1.0.0-arm64.dmg))*
+* **Windows (PC)**: [`TicTacToe-Arena-1.0.0-win.zip`](https://github.com/Mel6502-AI/ticktacktoe/releases/download/v1.0.0/TicTacToe-Arena-1.0.0-win.zip) *(portable package with `TicTacToe-Arena.exe`)*
+* **Linux**: [`ticktacktoe-1.0.0.tar.gz`](https://github.com/Mel6502-AI/ticktacktoe/releases/download/v1.0.0/ticktacktoe-1.0.0.tar.gz) *(standalone Linux package)*
+* 📂 All installers: **[GitHub Releases v1.0.0](https://github.com/Mel6502-AI/ticktacktoe/releases/tag/v1.0.0)**
 
 ---
 
