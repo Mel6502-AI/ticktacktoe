@@ -4,14 +4,17 @@ Tactical Tic-Tac-Toe with AI bot, local pass-and-play, and real-time WebRTC peer
 
 ---
 
-### 🌐 Play in Browser
-Instantly playable with zero installation across desktop, tablet, and mobile browsers:  
+### 🌐 Web & Mobile (iPhone, iPad, Android)
+Play instantly across desktop and mobile browsers, or install directly to your device home screen:  
 👉 **[melvynkui.com/games/tictactoe/](https://melvynkui.com/games/tictactoe/)**
 
-### 📦 Desktop App (macOS)
-Standalone native window with zero browser frame, sandboxed security, and hardware acceleration:  
-👉 **[`TicTacToe-Arena-1.0.0-arm64.dmg`](./TicTacToe-Arena-1.0.0-arm64.dmg)** *(Apple Silicon / M-Series)*  
-*Also available under [GitHub Releases](https://github.com/Mel6502-AI/ticktacktoe/releases/tag/v1.0.0).*
+* **📱 iPhone / iPad**: Open in Safari → tap **Share** → tap **Add to Home Screen** for a fullscreen native app experience with zero browser frame.
+* **🤖 Android**: Open in Chrome → tap **Install App** to add to your app drawer and home screen.
+
+### 📦 Desktop Apps
+Standalone native windows with hardware acceleration and sandboxed security:
+* **macOS (Apple Silicon)**: Download [`TicTacToe-Arena-1.0.0-arm64.dmg`](./TicTacToe-Arena-1.0.0-arm64.dmg) *(also under [Releases](https://github.com/Mel6502-AI/ticktacktoe/releases/tag/v1.0.0))*
+* **Windows & Linux**: Run `npm run build:win` (generates portable Windows ZIP with `.exe`) or `npm run build:linux` (generates Linux `.tar.gz`).
 
 ---
 
